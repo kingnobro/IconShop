@@ -33,7 +33,7 @@ The resulting file structure should be:
     └── ...
 ```
 
-> There are some useful files in this link. Please check the `Readme.md` and download them as needed.
+There are some other useful files in the Google Drive link. Please check the `Readme.md` and download them as needed.
 
 ## Training
 I use 8 RTX 3090 (or 2 A100) to train the model.
@@ -52,7 +52,10 @@ bash scripts/log.sh
 ```bash
 bash scripts/sample.sh
 ```
+Download our [pretrained models](https://drive.google.com/drive/folders/1xF0AjYk-WvfNuv6z5xluNDC87ktke2rK?usp=sharing) and unzip it under `proj_log/FIGR_SVG`. This model is trained with 100 epochs.
 
+Please note that the results presented in the paper may differ from those of this pretrained model (e.g., the same prompt will create different outputs). Due to copyright issues, access to the model described in the paper is available upon request for research purposes only.
 
 ## Miscellaneous
-> Acknowledgement: We would like to express our sincere gratitude to OPPO for their generous support of our work.
+- Our code is based on [SkexGen](https://github.com/samxuxiang/SkexGen) and [DeepSVG](https://github.com/alexandre01/deepsvg) (for read and write SVG data).
+- Acknowledgement: We would like to express our sincere gratitude to OPPO for their generous support of our work.

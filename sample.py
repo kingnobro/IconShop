@@ -42,7 +42,14 @@ def sample(args, cfg):
         os.makedirs(args.output)
     
     texts = [
-        'img,photo'
+        'calendar',
+        'emotion,face,sad',
+        'bug,spider',
+        'trash,basket,garbage',
+        'car',
+        'star',
+        'signal,wifi',
+        'book,agenda',
     ]
 
     for text in texts:

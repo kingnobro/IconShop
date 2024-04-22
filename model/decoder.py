@@ -167,8 +167,6 @@ class SketchDecoder(nn.Module):
     context_embedding = torch.zeros((1, c_bs, self.embed_dim)).to(device) # [1, bs, dim]
 
     # tokens.shape [batch_size, text_len, emb_dim]
-    # TODO: delete me [√]
-    # tokens = text
     tokens = self.text_emb(text)
 
     # Data input embedding
@@ -192,8 +190,6 @@ class SketchDecoder(nn.Module):
     nopeak_mask = torch.nn.Transformer.generate_square_subsequent_mask(c_seqlen+1).to(device)  # masked with -inf
     if pixel_mask is not None:
       # pixel_mask.shape [batch_size, text_len+max_len]
-      # TODO: text mask?
-      # In DALLE, each padding in text is assignedw with a new uesless embedding
       pixel_mask = torch.cat([(torch.zeros([c_bs, context_embedding.shape[0]+self.text_len])==1).to(device), pixel_mask], axis=1)  
     decoder_out = self.decoder(tgt=decoder_inputs, memory=memory_encode, memory_key_padding_mask=None,
                                tgt_mask=nopeak_mask, tgt_key_padding_mask=pixel_mask)

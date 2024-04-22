@@ -1,0 +1,31 @@
+name: iconshop
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - cudatoolkit=11.6
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cu116
+    - torch==1.12.1+cu116
+    - torchaudio==0.12.1
+    - torchvision==0.13.1+cu116
+    - accelerate
+    - cairosvg
+    - einops
+    - ipython
+    - Kivy
+    - matplotlib
+    - moviepy
+    - networkx
+    - numpy
+    - pandas
+    - pillow
+    - scikit_learn
+    - scipy
+    - tensorboard
+    - torch
+    - tqdm
+    - transformers
+    - shapely

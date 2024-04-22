@@ -1,0 +1,1 @@
+tensorboard --logdir=./proj_log --port=6006

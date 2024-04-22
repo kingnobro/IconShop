@@ -38,7 +38,7 @@ The resulting file structure should be:
 ## Training
 I use 8 RTX 3090 (or 2 A100) to train the model.
 
-Feel free to adjust the batch size, number of epochs, and learning rate, as I did not spend a lot of time optimizing these parameters.
+Feel free to adjust the batch size, number of epochs, and learning rate. The training will take several days, so I did not spend a lot of time optimizing these parameters.
 ```
 bash scripts/train.sh
 ```
@@ -52,3 +52,7 @@ bash scripts/log.sh
 ```bash
 bash scripts/sample.sh
 ```
+
+
+## Miscellaneous
+> Acknowledgement: We would like to express our sincere gratitude to OPPO for their generous support of our work.

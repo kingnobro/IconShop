@@ -54,7 +54,17 @@ bash scripts/sample.sh
 ```
 Download our [pretrained models](https://drive.google.com/drive/folders/1xF0AjYk-WvfNuv6z5xluNDC87ktke2rK?usp=sharing) and unzip it under `proj_log/FIGR_SVG`. This model is trained with 100 epochs.
 
-Please note that the results presented in the paper may differ from those of this pretrained model (e.g., the same prompt will create different outputs). Due to copyright issues, access to the model described in the paper is available upon request for research purposes only.
+> [!CAUTION] 
+> The pretrained model in this repository produces different results from those shown in the paper. This is primarily due to dataset differences:
+> - The paper uses a higher-precision dataset with 100x100 bounding boxes
+> - This repository uses the FIGR dataset with 200x200 bounding boxes
+>
+> To reproduce the paper's results:
+> 1. Original model weights and GUI: [Download Link](https://drive.google.com/drive/folders/1ZS1dAIGz6t29uJ9i_7LTDvZbMRUKG0dp?usp=sharing)
+> 2. Training dataset (zoom_svgs.zip): [Download Link](https://drive.google.com/drive/folders/1Iz39p31i8z9H0LrnSS3RJ2zwWA4T9Btv?usp=sharing)
+>
+> The provided GUI significantly simplifies the editing process. Manual implementation without the GUI requires extensive parameter tuning and preprocessing steps.
+
 
 ## Miscellaneous
 - Our code is based on [SkexGen](https://github.com/samxuxiang/SkexGen) and [DeepSVG](https://github.com/alexandre01/deepsvg) (for read and write SVG data).
